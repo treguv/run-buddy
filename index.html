@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css"/>
-    <title>Run Buddyt</title>
+    <title>Run Buddy</title>
 </head>
 <body>
     <!-- Navigation -->
@@ -41,7 +41,35 @@
     </header>
     <!-- Jumbotron -->
     <section>
+        <div>
+            <h3>Get Started Today</h3>
+            <p>Fill out this form and one of our trainers will schedule a consult</p>
+            <!-- Create The Form-->
+            <form>
+                <label for="name">Enter Full Name:</label>
+                <input type="text" placeholder="Your Name" name="name" id="name"/>
+                <label for="email">Enter Email Address:</label>
+                <input type="text" placeholder="Email Address" name="email" id="email"/>
+                <label for="phone">Enter a Telephone Number:</label>
+                <input type="text" placeholder="Phone Number" name="phone" id="phone"/>
+                <p>
+                    Have you worked out with a trainer before?
+                    <input type="radio" name="trainer-confirm" id="trainer-yes"/>
+                    <label for="trainer-yes">Yes</label>
+                    <input type="radio" name="trainer-confirm" id="trainer-no">
+                    <label for="trainer-no">No</label>
 
+
+                </p>
+                <p>
+                    <label for="checkbox">I aknowledge that I am at least 18 years of age.</label>
+                    <input type="checkbox" name="age" id="checkbox">
+                </p>
+                <button type="submit">
+                    Get Running!
+                </button>
+            </form>
+        </div>
     </section>
     <!-- What we do -->
     <section>
