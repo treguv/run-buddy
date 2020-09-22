@@ -77,23 +77,29 @@ section {
 /* Hero Style */
 .hero {
     background-image: url("../images/hero-bg.jpg");
-    height:600px;
+    /*height:600px;*/
     background-size: cover;
     background-position: center;
-    position: relative;
+    /*position: relative;*/
+    /*Add Flexbox*/
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .hero-form {
     background-color: #fce138;
     color:#024e76;
     padding: 20px;
-    width:500px;
+    /*width:500px;*/
     /*Border*/
     border-style: solid;
     border-width: 3px;
     border-color: #024e76;
-    position: absolute;
+    /*position: absolute;
     bottom:120px;
-    right:140px;
+    right:140px; */
+    width:40%;
+    margin: 3.5%
 }
 
 .hero-form h3{
@@ -103,6 +109,19 @@ section {
 
 .hero-form p {
    margin: 5px 0 15px 0;
+}
+
+.hero-cta {
+    width: 35%;
+    text-align:right;
+    margin: 3.5%;
+    color: #fff;
+    font-size: 18px;
+    color: #fce138;
+}
+.hero-cta h2 {
+    font-style: italic;
+    font-size: 55px;
 }
 .form-input {
     border: 1px solid #024e76;
