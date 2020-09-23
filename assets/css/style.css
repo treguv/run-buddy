@@ -173,6 +173,16 @@ section {
 }
 
 /*What we do*/
+.step {
+    margin:50px auto;
+    padding-bottom: 50px;
+    width: 80%;
+    border-bottom: 1px solid #39a6b2;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
 .steps {
     /*text-align: center;*/
     background: #fce138;
@@ -186,20 +196,53 @@ section {
     border-bottom:3px solid;
     border-color: #39a6b2;
 }
+
+.step h3 {
+    flex: 1 30%;
+    /* Missing Stuff*/
+    font-size: 40px;
+    color: #024e76;
+}
 .steps div {
-    margin-bottom: 80px;
+   /* margin-bottom: 80px;*/
 }
 
 .steps img {
-    width: 15%;
-    margin: 10px 0;
+    /*width: 15%;
+    margin: 10px 0; */
 }
-.steps p {
+.step-text p {
     color: #39a6b2;
-    font-size: 23px;
+    font-size: 18px;
 }
+.step-text h4 {
+    font-size: 26px;
+    line-height: 1.5;
+    color: #024e76;
+}
+
+.step-info {
+    flex: 2 70%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.step-img {
+    flex: 1 12%;
+    margin-right: 20px;
+}
+
+.step-img img {
+    max-width:100%;
+}
+
+.step-text{
+    flex: 12;
+}
+
 .steps span {
-    font-size: 38px;
+    /*font-size: 38px;*/
 }
 /* General classes that will be reused */
 .section-title {
