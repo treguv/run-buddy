@@ -445,6 +445,57 @@ section {
         flex: 1 100%;
     }
 }
+/*Services CSS*/
+.services {
+    background: #fce138;
+}
+
+.service-grid-wrapper {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+/* CSS GRID FOR SERVICE COSTS */
+
+.service-grid-container {
+    background: lightyellow;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 4fr);
+    grid-template-rows: repeat(5, 1fr) 2fr;
+    border: 2px solid #024e76;
+    color: #024e76;
+    font-size: 1.2rem;
+}
+
+.service-grid-item {
+    padding:15px 0;
+    border: 2px solid #024e76;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+}
+.service-grid-item.basic {
+    grid-column: 2/span 1;
+}
+.service-grid-item.both {
+    grid-column: 2 / span 2;
+}
+
+.service-grid-item.cancel {
+    writing-mode: vertical-lr;
+    grid-column:1;
+    grid-row: 1 / -1;
+    transform: rotate(180deg);
+}
+
+.grid-head, .grid-price, .service-grid-item.cancel {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* You can declare size for each individual box*/
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width:768px){
     section {
@@ -474,38 +525,8 @@ section {
     }
 }
 
-/* CSS GRID FOR SERVICE COSTS */
-.service-grid-container {
-    display: grid;
-    max-width: 940px;
-    margin: 0 auto;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3, 100px);
-    grid-gap: 10px;
-}
 
-.service-grid-item {
-    background-color: orange;
-    border: solid;
-    padding:1em;
-    color: black;
-}
 
-/* You can declare size for each individual box*/
-.box1 {
-    grid-column:1/ span 1;
-    grid-row: 1/ span 2;
-}
-
-.box2 {
-    grid-column: 3/4;
-    grid-row: 1/-1;
-}
-
-.box3 {
-    grid-column: 2/ span 2;
-    grid-row: 3/ span 1;
-}
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
     .hero-form button {
@@ -533,5 +554,31 @@ section {
 
     .contact-form {
         order: 3;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .service-grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .service-grid-item.basic {
+        grid-column:1;
+    }
+
+    .service-grid-item.premium {
+        grid-column:2;
+    }
+
+    .service-grid-item.both{
+        grid-column:1 / -1;
+    }
+
+    .service-grid-item.cancel{
+        grid-column:1 / -1;
+        grid-row: -1;
+        writing-mode: unset;
+        transform: none;
     }
   }
