@@ -396,6 +396,68 @@ section {
     /*float:left;*/
 }
 
+.trainer-img{
+    display:flex;
+    padding:15px;
+    align-items:flex-end;
+    width:100%;
+    min-height:300px;
+    position: relative;
+    overflow:hidden;
+}
+
+.trainer-img::after{
+    content:"";
+    height:100%;
+    width:100%;
+    background:linear-gradient(rgba(252, 225, 56, 0.3),rgba(2, 78, 118,0.3));
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    transition: 0.5s;
+    
+
+}
+
+.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+    top:0;
+
+}
+.trainer:hover .trainer-img::after{ 
+    opacity: 1;
+}
+.trainer-img h3{
+    position:relative;
+    z-index:9998;
+    margin-bottom:5px;
+    font-size:28px;
+    top:200px;
+    transition:0.6s;
+}   
+
+.trainer-img h4{
+    position:relative;
+    top:200px;
+    z-index:9998;
+    font-size:22px;
+    transition:0.6s;
+}
+.trainer-1{
+    background-image:url("../images/trainer-1.jpg");
+    background-size:cover;
+}
+
+.trainer-2{
+    background-image:url("../images/trainer-2.jpg");
+    background-size:cover;
+}
+
+.trainer-3{
+    background-image:url("../images/trainer-3.jpg");
+    background-size:cover;
+}
+
 .trainer-bio {
     padding: 25px;
     /*float:left;
@@ -417,12 +479,14 @@ section {
 
 .trainer-bio h3 {
     font-size: 28px;
+    display:none; /* This displays nothing and removes it from flow*/
 }
 
 .trainer-bio h4 {
     font-weight: lighter;
     font-size: 22px;
     margin-bottom:15px;
+    display:none;
 }
 .trainer-bio p {
     font-size: 17px;
@@ -638,6 +702,14 @@ section {
     }
     .step-text {
         flex: 100%;
+    }
+
+    .trainer-img h3, .trainer-img h4{
+        display:none;
+    }
+
+    .trainer-bio h3, .trainer-bio h4{
+        display: inline;
     }
 }
 
